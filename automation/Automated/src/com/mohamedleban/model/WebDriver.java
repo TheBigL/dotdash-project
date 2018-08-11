@@ -26,6 +26,7 @@ public class WebDriver
         resetElementCounter(elementCount);
         printTaskNames(listElements);
         checkedTasks(listElements, elementCount);
+		driver.close();
 
 
 
@@ -47,8 +48,9 @@ public class WebDriver
         }
 
         System.out.println("There are " + elementCount + "tasks without categories.");
+		resetElementCounter(elementCount);
     }
-
+	//Calculates the tasks and lists them
     public void totalTasks(int elementCount, List<WebElement> elements)
     {
         for(WebElement element: elements)
